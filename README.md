@@ -1,5 +1,5 @@
-# Utils-ProjectPrefs
+# UnityUtils-ProjectPrefs
 Require:
-  TED-inc/Utils-MathExt
-  TED-inc/Utils-Json
+  TED-inc/UnityUtils-MathExt
+  TED-inc/UnityUtils-Json
 
