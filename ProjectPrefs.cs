@@ -1,38 +1,20 @@
-﻿using TEDinc.Utils.SO;
-#if UNITY_EDITOR
-using UnityEditor;
-using UnityEngine;
-#endif
-
-namespace TEDinc.Utils.ProjPrefs
+﻿namespace TEDinc.Utils.ProjPrefs
 {
     public static class ProjectPrefs
     {
-        public static ProjectPrefsSO InBuild => inBuild;
-        private static ProjectPrefsSO inBuild;
+        public static ProjectPrefsSO InBuild { get; private set; }
 
 #if UNITY_EDITOR
-        public static ProjectPrefsSO InEditor
-        {
-            get
-            {
-                if (inEditor == null)
-                    inEditor = SOUtils.FindOrCraete<ProjectPrefsSO>
-                        (path: $"Assets\\{ nameof(Utils)}\\{nameof(ProjectPrefs)}\\{nameof(Editor)}\\{nameof(ProjectPrefsSO)}{nameof(InEditor)}");
-
-                return inEditor;
-            }
-        }
-        private static ProjectPrefsSO inEditor;
+        public static ProjectPrefsSO InEditor { get; private set; }
 #endif
 
         public static void TryAdd(ProjectPrefsSO projectPrefsSO)
         {
-            if (inBuild == null && projectPrefsSO.name.ToLower().Contains(nameof(inBuild).ToLower()))
-                inBuild = projectPrefsSO;
+            if (InBuild == null && projectPrefsSO.name.ToLower().Contains(nameof(InBuild).ToLower()))
+                InBuild = projectPrefsSO;
 #if UNITY_EDITOR
-            else if (inEditor == null && projectPrefsSO.name.ToLower().Contains(nameof(inEditor).ToLower()))
-                inEditor = projectPrefsSO;
+            else if (InEditor == null && projectPrefsSO.name.ToLower().Contains(nameof(InEditor).ToLower()))
+                InEditor = projectPrefsSO;
 #endif
         }
     }
