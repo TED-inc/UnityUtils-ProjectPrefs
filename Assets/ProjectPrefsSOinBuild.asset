@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d3ccc99b982de646a70a2b6ae04c5a8, type: 3}
   m_Name: ProjectPrefsSOinBuild
   m_EditorClassIdentifier: 
-  selfAddableInEditMode: 1
+  selfAddableInEditMode: 0
   strings:
     json: "[\n\t]"
   ints:
-    json: "[\n\t{\"Key\":\"TestButton\",\"Value\":{\"valueEcrypted\":-1513984804,\"key\":-1513984871}}\n]"
+    json: "[\n\t{\"Key\":\"TestButton\",\"Value\":{\"valueEcrypted\":-2041568218,\"key\":-2041568157}}\n]"
   floats:
     json: "[\n\t]"
   bools:

@@ -53,7 +53,7 @@ namespace TEDinc.Utils.ProjPrefs
             bools = new SerizDictOfBool();
         }
 
-        [PersistantSaveOnLoad]
+        [PersistantSaveInvokeOnLoad]
         private void TryAssign() =>
             ProjectPrefs.TryAdd(this);
 
