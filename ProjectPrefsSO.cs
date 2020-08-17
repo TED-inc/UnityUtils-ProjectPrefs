@@ -65,6 +65,11 @@ namespace TEDinc.Utils.ProjPrefs
             if (selfAddableInEditMode)
                 TryAssign();
         }
+        private void OnDisable()
+        {
+            if (selfAddableInEditMode)
+                TryAssign();
+        }
 #endif
     }
 }
