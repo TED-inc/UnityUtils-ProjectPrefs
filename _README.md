@@ -6,4 +6,5 @@ Require:
 
 Using:
 1) Setup UnityUtils-PersistantSave (look in it _README.md)
-2) Add "ProjectPrefsSOinBuild" asset to "PersistantSaveInstance" component
+2) Import unitypackage
+3) Add "ProjectPrefsSOinBuild" asset to "PersistantSaveInstance" component
